@@ -1,0 +1,152 @@
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>Firebase Web Basics</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700" rel="stylesheet">
+
+    <script src="https://use.fontawesome.com/939e9dd52c.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        #loader {
+                width: 50px;
+                aspect-ratio: 1;
+                display: grid;
+                border-radius: 50%;
+                background:
+                    linear-gradient(0deg, rgb(0 0 0/50%) 30%, #0000 0 70%, rgb(0 0 0/100%) 0) 50%/8% 100%,
+                    linear-gradient(90deg, rgb(0 0 0/25%) 30%, #0000 0 70%, rgb(0 0 0/75%) 0) 50%/100% 8%;
+                background-repeat: no-repeat;
+                animation: l23 1s infinite steps(12);
+            }
+
+            #loader::before,
+            #loader::after {
+                content: "";
+                grid-area: 1/1;
+                border-radius: 50%;
+                background: inherit;
+                opacity: 0.915;
+                transform: rotate(30deg);
+            }
+
+            #loader::after {
+                opacity: 0.83;
+                transform: rotate(60deg);
+            }
+
+            @keyframes l23 {
+                100% {
+                    transform: rotate(1turn)
+                }
+            }
+    </style>
+</head>
+
+<body>
+
+    <div id="loader">
+       
+    </div>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAjz8kcMYGm1rdhSgsxxEz5Znd_9nkWaWQ",
+            authDomain: "share-my-ride-5b357.firebaseapp.com",
+            databaseURL: "https://share-my-ride-5b357-default-rtdb.firebaseio.com",
+            projectId: "share-my-ride-5b357",
+            storageBucket: "share-my-ride-5b357.appspot.com",
+            messagingSenderId: "398847362616",
+            appId: "1:398847362616:web:420856bba1bb223d43c8cd"
+        };
+        firebase.initializeApp(config);
+        //-------------------------------------
+
+        var uploader = document.getElementById('uploader');
+        var fileButton = document.getElementById('fileButton');
+        fileButton.addEventListener('change', function (e) {
+            var file = e.target.files[0];
+            var storageRef = firebase.storage().ref('img/' + file.name);
+            var task = storageRef.put(file);
+            task.on('state_changed', function progress(snapshot) {
+                var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                uploader.value = percentage;
+
+            }, function error(err) {
+
+
+            }, function complete() {
+
+            });
+        });
+
+
+    </script>
+
+    <script src="fileup.js">
+    </script>
+</body>
+
+</html> -->
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>
+		Reset select value to
+		default with JQuery
+	</title>
+
+	<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+	</script>
+</head>
+
+<body style="text-align:center;">
+
+	<h1 style="color:green;">
+		GeeksForGeeks
+	</h1>
+
+	<p id="GFG_UP"></p>
+
+
+	<select id="select">
+		<option value="GFG_1">GFG_1</option>
+		<option value="GFG_2" selected="selected">
+			GFG_2
+		</option>
+		<option value="GFG_3">GFG_3</option>
+	</select>
+
+	<button onclick="GFG_Fun()">
+		Click Here
+	</button>
+	
+	<p id="GFG_DOWN"></p>
+
+
+	<script>
+		var el_up = document.getElementById('GFG_UP');
+		var el_down = document.getElementById('GFG_DOWN');
+		el_up.innerHTML = "Select a different option "
+				+ "and then click on the button to "
+				+ "perform the operation";
+				
+		function GFG_Fun() {
+			$('#select option').prop('selected', function () {
+				return this.defaultSelected;
+			});
+			el_down.innerHTML = "Default selected";
+		}
+	</script>
+</body>
+
+</html>

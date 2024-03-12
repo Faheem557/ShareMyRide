@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+< lang="en">
+
+    <head>
+        <!-- <meta charset="utf-8" />
+        <title> | Hyper - Responsive Bootstrap 5 Admin Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+        App favicon
+        <link rel="shortcut icon" href="assets/images/favicon.ico"> -->
+
+        <meta charset="utf-8" />
+        <title>Share my ride - Admin & Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+        <meta content="" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+        <!-- App css -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/plugins/select/selectr.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+        <!-- add font awsome  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+        <style>
+            /* HTML: <div class="loader"></div> */
+            /* .loader {
+                width: 50px;
+                aspect-ratio: 1;
+                border-radius: 50%;
+                border: 8px solid lightblue;
+                border-right-color: orange;
+                animation: l2 1s infinite linear;
+            }
+
+            @keyframes l2 {
+                to {
+                    transform: rotate(1turn)
+                }
+            } */
+
+            /* HTML: <div class="loader"></div> */
+            .loader {
+                width: 50px;
+                aspect-ratio: 1;
+                display: grid;
+                border-radius: 50%;
+                background:
+                    linear-gradient(0deg, rgb(0 0 0/50%) 30%, #0000 0 70%, rgb(0 0 0/100%) 0) 50%/8% 100%,
+                    linear-gradient(90deg, rgb(0 0 0/25%) 30%, #0000 0 70%, rgb(0 0 0/75%) 0) 50%/100% 8%;
+                background-repeat: no-repeat;
+                animation: l23 1s infinite steps(12);
+            }
+
+            .loader::before,
+            .loader::after {
+                content: "";
+                grid-area: 1/1;
+                border-radius: 50%;
+                background: inherit;
+                opacity: 0.915;
+                transform: rotate(30deg);
+            }
+
+            .loader::after {
+                opacity: 0.83;
+                transform: rotate(60deg);
+            }
+
+            @keyframes l23 {
+                100% {
+                    transform: rotate(1turn)
+                }
+            }
+        </style>
+    </head>
+
+    <body id="body" class="dark-sidebar">
+        <!-- leftbar-tab-menu -->
+        <div class="left-sidebar">
+            <!-- LOGO -->
+            <div class="brand">
+                <a href="index.html" class="logo">
+                    <span>
+                        <img src="assets/images/logo-sm.png" alt="logo-small" class="logo-sm">
+                    </span>
+                    <span>
+                        <img src="assets/images/logo.png" alt="logo-large" class="logo-lg logo-light">
+                        <img src="assets/images/logo-dark.png" alt="logo-large" class="logo-lg logo-dark">
+                    </span>
+                </a>
+            </div>
+            <div class="sidebar-user-pro media border-end">
+                <div class="position-relative mx-auto">
+                    <img src="assets/images/users/user-4.jpg" alt="user" class="rounded-circle thumb-md">
+                    <span class="online-icon position-absolute end-0"><i class="mdi mdi-record text-success"></i></span>
+                </div>
+                <div class="media-body ms-2 user-detail align-self-center">
+                    <h5 class="font-14 m-0 fw-bold">Mr. Michael Hill </h5>
+                    <p class="opacity-50 mb-0">michael.hill@exemple.com</p>
+                </div>
+            </div>
+
+            <!-- Tab panes -->
+
+            <!--end logo-->
+            <div class="menu-content h-100" data-simplebar>
+                <div class="menu-body navbar-vertical">
+                    <div class="collapse navbar-collapse tab-content" id="sidebarCollapse">
+                        <!-- Navigation -->
+                        <ul class="navbar-nav tab-pane active" id="Main" role="tabpanel">
+                            <!-- <li class="menu-label mt-0 text-primary font-12 fw-semibold">M<span>ain</span><br><span
+                                class="font-10 text-secondary fw-normal">Unique Dashboard</span></li> -->
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="passengers.html"><i
+                                        class="ti ti-users menu-icon"></i><span>Passengers</span></a>
+                            </li><!--end nav-item-->
+                            <li class="nav-item">
+                                <a class="nav-link" href="Drivers.html"><i
+                                        class="ti ti-users menu-icon"></i><span>drivers</span></a>
+                            </li><!--end nav-item-->
+                            <li class="nav-item">
+                                <a class="nav-link" href="Settings.html"><i
+                                        class="ti ti-calendar menu-icon"></i><span>settings</span></a>
+                            </li><!--end nav-item-->
+                            <!-- <li class="nav-item">
+                            <a class="nav-link" href="apps-invoice.html"><i
+                                    class="ti ti-file-invoice menu-icon"></i><span>Invoice</span></a>
+                        </li>end nav-item -->
+                        </ul>
+                        <ul class="navbar-nav tab-pane" id="Extra" role="tabpanel">
+                            <li>
+                                <div class="update-msg text-center position-relative">
+                                    <button type="button" class="btn-close position-absolute end-0 me-2"
+                                        aria-label="Close"></button>
+                                    <img src="assets/images/speaker-light.png" alt="" class="" height="110">
+                                    <h5 class="mt-0">Mannat Themes</h5>
+                                    <p class="mb-3">We Design and Develop Clean and High Quality Web Applications</p>
+                                    <a href="javascript: void(0);" class="btn btn-outline-warning btn-sm">Upgrade your
+                                        plan</a>
+                                </div>
+                            </li>
+                        </ul><!--end navbar-nav--->
+                    </div><!--end sidebarCollapse-->
+                </div>
+            </div>
+        </div>
+        <!-- end left-sidenav-->
+        <!-- end leftbar-menu-->
+
+        <!-- Top Bar Start -->
+        <!-- Top Bar Start -->
+        <div class="topbar">
+            <!-- Navbar -->
+            <nav class="navbar-custom" id="navbar-custom">
+                <ul class="list-unstyled topbar-nav float-end mb-0">
+                    <li class="dropdown">
+                        <a class="nav-link dropdown-toggle nav-user" data-bs-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="false" aria-expanded="false">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/images/users/user-4.jpg" alt="profile-user"
+                                    class="rounded-circle me-2 thumb-sm" />
+                                <div>
+                                    <small class="d-none d-md-block font-11">Admin</small>
+                                    <span class="d-none d-md-block fw-semibold font-12">Maria Gibson <i
+                                            class="mdi mdi-chevron-down"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item" href="#"><i class="ti ti-user font-16 me-1 align-text-bottom"></i>
+                                Profile</a>
+                            <a class="dropdown-item" href="#"><i
+                                    class="ti ti-settings font-16 me-1 align-text-bottom"></i>
+                                Settings</a>
+                            <div class="dropdown-divider mb-0"></div>
+                            <a class="dropdown-item" href="#"><i class="ti ti-power font-16 me-1 align-text-bottom"></i>
+                                Logout</a>
+                        </div>
+                    </li><!--end topbar-profile-->
+                    <li class="notification-list">
+                        <!-- <a class="nav-link arrow-none nav-icon offcanvas-btn" href="#" data-bs-toggle="offcanvas"
+                        data-bs-target="#Appearance" role="button" aria-controls="Rightbar">
+                        <i class="ti ti-settings ti-spin"></i>
+                    </a> -->
+                    </li>
+                </ul><!--end topbar-nav-->
+
+                <ul class="list-unstyled topbar-nav mb-0">
+                    <li>
+                        <button class="nav-link button-menu-mobile nav-icon" id="togglemenu">
+                            <i class="ti ti-menu-2"></i>
+                        </button>
+                    </li>
+                    <li class="hide-phone app-search">
+                        <form role="search" action="#" method="get">
+                            <input type="search" name="search" class="form-control top-search mb-0"
+                                placeholder="Type text...">
+                            <button type="submit"><i class="ti ti-search"></i></button>
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+            <!-- end navbar-->
+        </div>
+        <!-- Top Bar End -->
+        <!-- Top Bar End -->
+
+        <div class="page-wrapper">
+
+            <!-- Page Content-->
+            <div class="page-content-tab">
+
+                <div class="container-fluid">
+                    <!-- Page-Title -->
+                    <div class="row">
+                        <div class="col-lg-3 position-sticky top-10 end-0 mt-3">
+                            <div class="toast align-items-center text-white bg-success border-0  p-2 " id="Msg"
+                                role="alert" aria-live="assertive" aria-atomic="true">
+                                <div class="d-flex">
+                                    <div class="toast-body">
+                                        <span id="Message"></span>
+                                    </div>
+                                    <button type="button" class="btn-close btn-close-white me-2 m-auto"
+                                        data-bs-dismiss="toast" aria-label="Close"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="page-title-box">
+                                <div class="float-end">
+                                    <ol class="breadcrumb">
+                                        <!-- <li class="breadcrumb-item"><a href="#">Unikit</a>
+                                    </li> -->
+                                        <!--end nav-item-->
+                                        <!-- <li class="breadcrumb-item"><a href="#">Dashboard</a>
+                                    </li> -->
+                                        <!--end nav-item-->
+                                        <!-- <li class="breadcrumb-item active">Analytics</li> -->
+                                    </ol>
+                                </div>
+                                <h4 class="page-title">Drivers List</h4>
+                            </div><!--end page-title-box-->
+                        </div><!--end col-->
+                    </div>
+                    <!-- end page title end breadcrumb -->
+
+                    <div class="row">
+                        <!-- Button trigger modal -->
+
+                        <div class="col-sm-12 d-flex justify-content-end align-items-center">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#AddDriverModel" id="AddDriverModelOPenBtn">
+                                Add Driver
+                            </button>
+                        </div>
+                        <div class="row">
+                            <div style="overflow-y: auto;">
+                                <table class="table table-hover table-bordered table-striped" id="datatable_2"
+                                    style="text-align: center;">
+                                    <thead class="" style="color: black;">
+                                        <tr>
+                                            <th scope="col" style="color: black;font-weight: bold;">S.No</th>
+                                            <th scope="col" style="color: black;font-weight: bold;">Name</th>
+                                            <th scope="col" style="color: black;font-weight: bold;">Email</th>
+                                            <th scope="col" style="color: black;font-weight: bold;">Password</th>
+                                            <th scope="col" style="color: black;font-weight: bold;">Phone</th>
+                                            <th scope="col" style="color: black;font-weight: bold;">Address</th>
+                                            <th scope="col" style="color: black;font-weight: bold;">CNIC</th>
+                                            <th scope="col" style="color: black;font-weight: bold;">Is verified</th>
+                                            <th scope="col" style="color: black;font-weight: bold;">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="PassengerTbl">
+                                        <!-- Add table rows and data here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div><!--end row-->
+                </div><!-- container -->
+                <!--Start Footer-->
+                <!-- Footer Start -->
+
+                <!-- Add Passenger Modal   -->
+                <div class="modal fade" id="AddDriverModel" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Add Driver Form</h5>
+                                <button type="button" class="close closebtn" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div id="loader" class="d-none position-fixed top-50 start-50 loader" style="z-index: 10;">
+
+                                </div>
+
+                                <div class="row">
+                                    <form class="row  needs-validation" novalidate>
+                                        <div class="col-6 mb-2">
+                                            <label for="validationCustom01" class="form-label">Name</label>
+                                            <input type="text" class="form-control" id="Name" required>
+                                            <div id="NameCheck"></div>
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input class="form-control" type="text" id="email"
+                                                placeholder="Enter email">
+                                            <small id="EmailCheck"></small>
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <label for="validationCustom01" class="form-label">Phone Number</label>
+                                            <input type="text" class="form-control" id="PhoneNo" required>
+                                            <div id="PhoneCheck"></div>
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <label for="validationCustom01" class="form-label">CNIC</label>
+                                            <input type="text" class="form-control" id="CNIC" required>
+                                            <div id="CNICCheck"></div>
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <label for="validationCustom01" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="Password" required>
+                                            <div id="PasswordCheck"></div>
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <label for="validationCustom01" class="form-label">Confirm Password</label>
+                                            <input type="password" class="form-control" id="CPassword" required>
+                                            <div id="PasswordConfirmCheck"></div>
+                                        </div>
+                                        <div class="col-12 mb-2">
+                                            <label for="validationCustom01" class="form-label">Address</label>
+                                            <input type="text" class="form-control" id="Address" required>
+                                            <div id="AddressCheck"></div>
+                                        </div>
+
+                                        <div class="col-6">
+                                            <label class="form-label">Vehical Type</label>
+                                            <select id="VehicalType" class="form-select" selected="selected">
+                                                <option value="0">Please Select Vehical Type</option>
+                                            </select>
+                                            <div id="VehicalTypeCheck"></div>
+                                        </div><!-- end col -->
+                                        <div class="col-6">
+                                            <label class="form-label">Vehical Model</label>
+                                            <select id="VehicalModel" class="form-select" selected>
+                                                <option value="0">Please Select Vehical Model</option>
+                                            </select>
+                                            <div id="VehicalModelCheck"></div>
+                                        </div><!-- end col -->
+                                        <div class="col-6">
+                                            <label class="form-label">Vehical Color</label>
+                                            <select id="VehicalColor" class=" form-select" selected>
+                                                <option value="0">Please Select Vehical Color</option>
+                                            </select>
+                                            <div id="VehicalColorCheck"></div>
+
+                                        </div><!-- end col -->
+                                        <div class="col-6 mb-2">
+                                            <label for="validationCustom01" class="form-label">Vehical Registration
+                                                Number</label>
+                                            <input type="text" class="form-control" id="VehicalNumber" required>
+                                            <div id="VehicalNumberCheck"></div>
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <label for="validationCustom01" class="form-label">CNIC Front</label>
+                                            <input type="file" class="form-control" id="CNICFrontImg">
+
+                                            <div id="CNIFrontCCheck"></div>
+                                        </div>
+
+                                        <div class="col-6 mb-2">
+                                            <label for="validationCustom01" class="form-label">CNIC Back</label>
+                                            <input type="file" class="form-control" id="CNICBackImg">
+                                            <div id="CNICBackCheck"></div>
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <label for="validationCustom01" class="form-label">Licence Front</label>
+                                            <input type="file" class="form-control" id="LicenceFrontImg">
+                                            <div id="LicenceFrontCheck"></div>
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <label for="validationCustom01" class="form-label">Licence Back</label>
+                                            <input type="file" class="form-control" id="LicenceBackImg">
+                                            <div id="LicenceBackCheck"></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary closebtn"
+                                    data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" id="AddDriverBtn">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Update Passenger Model -->
+                <div class="modal fade" id="UpdateDriverModel" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Update Driver Form</h5>
+                                <button type="button" class="close closebtn" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div id="loader" class="d-none position-fixed top-50 start-50 loader" style="z-index: 10;">
+
+                                </div>
+                                <div class="row">
+                                    <form class="row  needs-validation" novalidate>
+                                        <div class="col-6 mb-2">
+                                            <label for="validationCustom01" class="form-label">Name</label>
+                                            <input type="text" class="form-control" id="UpdateName" required>
+                                            <div id="UpdateNameCheck" class="invalid-feedback"></div>
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input class="form-control" type="text" id="Updateemail"
+                                                placeholder="Enter email">
+                                            <small id="UpdateEmailCheck"></small>
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <label for="validationCustom01" class="form-label">Phone Number</label>
+                                            <input type="text" class="form-control" id="UpdatePhoneNo" required>
+                                            <div id="UpdatePhoneCheck"></div>
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <label for="validationCustom01" class="form-label">CNIC</label>
+                                            <input type="text" class="form-control" id="UpdateCNIC" required>
+                                            <div id="UpdateCNICCheck"></div>
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <label for="validationCustom01" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="UpdatePassword" required>
+                                            <div id="UpdatePasswordCheck"></div>
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <label for="validationCustom01" class="form-label">Confirm Password</label>
+                                            <input type="password" class="form-control" id="UpdateCPassword" required>
+                                            <div id="UpdatePasswordConfirmCheck"></div>
+                                        </div>
+                                        <div class="col-12 mb-2">
+                                            <label for="validationCustom01" class="form-label">Address</label>
+                                            <input type="text" class="form-control" id="UpdateAddress" required
+                                                style="height: 50px;">
+                                            <div id="UpdateAddressCheck"></div>
+                                        </div>
+
+                                        <div class="col-6">
+                                            <label class="form-label">Vehical Type</label>
+                                            <select id="UpdateVehicalType" class="form-select">
+                                                <option value="0">Please Select Vehical Type</option>
+                                            </select>
+                                            <div id="UpdateVehicalTypeCheck"></div>
+                                        </div><!-- end col -->
+
+
+                                        <div class="col-6">
+                                            <label class="form-label">Vehical Model</label>
+                                            <select id="UpdateVehicalModel" class="form-select">
+                                                <option value="0">Please Select Vehical Model</option>
+                                            </select>
+                                            <div id="UpdateVehicalModelCheck"></div>
+                                        </div><!-- end col -->
+                                        <div class="col-6">
+                                            <label class="form-label">Vehical Color</label>
+                                            <select id="UpdateVehicalColor" class="form-select">
+                                                <option value="0">Please Select Vehical Color</option>
+                                            </select>
+                                            <div id="UpdateVehicalColorCheck"></div>
+                                        </div><!-- end col -->
+                                        <div class="col-6 mb-2">
+                                            <label for="validationCustom01" class="form-label">Vehical Registration
+                                                Number</label>
+                                            <input type="text" class="form-control" id="UpdateVehicalNumber" required>
+                                            <div id="UpdateVehicalNumberCheck"></div>
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <label for="validationCustom01" class="form-label">CNIC Front</label>
+                                            <!-- write image tags -->
+                                            <img class="mb-2" alt="" id="CNIC_FrontPic"
+                                                style="display: block; width: 100px; border: 1px solid black;">
+                                            <input type="file" class="form-control" id="UpdateCNICFrontImg">
+
+                                            <div id="UpdateCNIFrontCCheck"></div>
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <label for="validationCustom01" class="form-label">CNIC Back</label>
+                                            <!-- write image tags -->
+                                            <img class="mb-2" alt="" id="CNIC_BackPic"
+                                                style="display: block;width: 100px; border: 1px solid black;">
+
+                                            <input type="file" class="form-control" id="UpdateCNICBackImg">
+                                            <div id="UpdateCNICBackCheck"></div>
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <label for="validationCustom01" class="form-label">Licence Front</label>
+                                            <!-- write image tags -->
+                                            <img class="mb-2" alt="" id="Licence_FrontPic"
+                                                style="display: block;width: 100px; border: 1px solid black;">
+                                            <input type="file" class="form-control" id="UpdateLicenceFrontImg">
+                                            <div id="UpdateLicenceFrontCheck"></div>
+                                        </div>
+                                        <div class="col-6 mb-2">
+                                            <label for="validationCustom01" class="form-label">Licence Back</label>
+                                            <!-- write image tags -->
+                                            <img class="mb-2" alt="" id="Licence_BackPic"
+                                                style="display: block;width: 100px; border: 1px solid black;">
+
+                                            <input type="file" class="form-control" id="UpdateLicenceBackImg">
+                                            <div id="UpdateLicenceBackCheck"></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary closebtn"
+                                    data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" id="UpdateDriverBtn">Update</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <td><img src="" alt=""></td>
+                <footer class="footer text-center text-sm-start">
+                    &copy;
+                    <script>
+                        document.write(new Date().getFullYear())
+                    </script>
+                    Share My Ride <span class="text-muted d-none d-sm-inline-block float-end">Crafted with <i
+                            class="mdi mdi-heart text-danger"></i>Usman,Hamza and Junaid </span>
+                </footer>
+                <!-- end Footer -->
+                <!--end footer-->
+            </div>
+            <!-- end page content -->
+        </div>
+        <!-- end page-wrapper -->
+        <div style="width: 50px; border-radius: 50%;"></div>
+        <!-- Javascript  -->
+
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-database-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+
+
+
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+        <script>
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+                apiKey: "AIzaSyAjz8kcMYGm1rdhSgsxxEz5Znd_9nkWaWQ",
+                authDomain: "share-my-ride-5b357.firebaseapp.com",
+                databaseURL: "https://share-my-ride-5b357-default-rtdb.firebaseio.com",
+                projectId: "share-my-ride-5b357",
+                storageBucket: "share-my-ride-5b357.appspot.com",
+                messagingSenderId: "398847362616",
+                appId: "1:398847362616:web:420856bba1bb223d43c8cd"
+            };
+
+            // Initialize Firebase
+
+            firebase.initializeApp(firebaseConfig)
+            const database = firebase.database();
+            const storage = firebase.storage();
+
+            // fetch data
+            var fetchedData = database.ref('driver_details/')
+            var cnicFrontObj;
+            var cnicBackObj;
+            var licenceFrontObj;
+            var licenceBackObj;
+            var UpdatecnicFrontObj;
+            var UpdatecnicBackObj;
+            var UpdatelicenceFrontObj;
+            var UpdatelicenceBackObj;
+            fetchedData.on('value', (snapshot) => {
+                $("#PassengerTbl").empty();
+                var data = snapshot.val()
+                var i = 0;
+                for (var key in data) {
+                    i++;
+                    var value = data[key]
+                    // console.log(value.name);
+                    $("#PassengerTbl").append(
+                        "<tr>" +
+                        "<td>" + i + "</td>" +
+                        "<td>" + value.name + "</td>" +
+                        "<td>" + value.email + "</td>" +
+                        "<td>" + value.password + "</td>" +
+                        "<td>" + value.phone_number + "</td>" +
+                        "<td>" + value.address + "</td>" +
+                        "<td>" + value.CNIC + "</td>" +
+                        "<td>" + (value.Is_verified == 0 ? '<i class="fa-solid fa-circle-xmark" style="color: red; font-weight: bold; font-size: 24px;"></i>' : '<i class="fa-solid fa-circle-check" style="color: green; font-weight: bold; font-size: 24px;"></i>') + "</td>" +
+                        "<td><button type='button' class='EditPassenger btn btn-primary btn-sm'" +
+                        " data-bs-toggle='modal' data-bs-target='#UpdateDriverModel' data-value='" +
+                        encodeURIComponent(key) +
+                        "' id='EditBookStock'><i class='fas fa-edit'></i></button></td>" +
+                        "</tr>"
+
+
+                    );
+                }
+            });
+
+            // UPdate Data 
+
+            // Clear All input fields
+            function clearInput() {
+                $("#Name").val("");
+                $("#email").val("");
+                $("#PhoneNo").val("");
+                $("#Password").val("");
+                $("#CPassword").val("");
+                $("#Address").val("");
+                $("#CNIC").val("");
+                // $("#VehicalType").val("0");
+                GFG_Fun('VehicalType');
+                GFG_Fun('VehicalModel');
+                GFG_Fun('VehicalColor');
+                // $("#VehicalModel").val("0");
+                // $("#VehicalColor").val("0");
+                $("#VehicalNumber").val("");
+                $("#CNICFrontImg").val("");
+                $("#CNICBackImg").val("");
+                $("#LicenceFrontImg").val("");
+                $("#LicenceBackImg").val("");
+            }
+            function GFG_Fun(selectId) {
+                $('#' + selectId).prop('selectedIndex', 0);
+            }
+            $("#AddDriverModelOPenBtn").on('click', function () {
+                clearInput();
+                clearValidation();
+                resetBtn();
+            });
+            //Write a function to clear all vaildation messages
+            function clearValidation() {
+                $("#NameCheck").removeClass('text-danger').html("");
+                $("#EmailCheck").removeClass('text-danger').html("");
+                $("#PhoneCheck").removeClass('text-danger').html("");
+                $("#PasswordCheck").removeClass('text-danger').html("");
+                $("#PasswordConfirmCheck").removeClass('text-danger').html("");
+                $("#AddressCheck").removeClass('text-danger').html("");
+                $("#CNICCheck").removeClass('text-danger').html("");
+                $("#VehicalTypeCheck").removeClass('text-danger').html("");
+                $("#VehicalModelCheck").removeClass('text-danger').html("");
+                $("#VehicalColorCheck").removeClass('text-danger').html("");
+                $("#VehicalNumber").removeClass('text-danger').html("");
+                $("#CNIFrontCCheck").removeClass('text-danger').html("");
+                $("#CNICBackCheck").removeClass('text-danger').html("");
+                $("#LicenceFrontCheck").removeClass('text-danger').html("");
+                $("#LicenceBackCheck").removeClass('text-danger').html("");
+
+                //Now use update function to clear all validation messages
+                $("#UpdateNameCheck").removeClass('text-danger').html("");
+                $("#UpdateEmailCheck").removeClass('text-danger').html("");
+                $("#UpdatePhoneCheck").removeClass('text-danger').html("");
+                $("#UpdatePasswordCheck").removeClass('text-danger').html("");
+                $("#UpdatePasswordConfirmCheck").removeClass('text-danger').html("");
+                $("#UpdateAddressCheck").removeClass('text-danger').html("");
+                $("#UpdateCNICCheck").removeClass('text-danger').html("");
+                $("#UpdateVehicalType").removeClass('text-danger').html("");
+                $("#UpdateVehicalModel").removeClass('text-danger').html("");
+                $("#UpdateVehicalColor").removeClass('text-danger').html("");
+                $("#UpdateVehicalNumber").removeClass('text-danger').html("");
+                $("#UpdateCNIFrontCCheck").removeClass('text-danger').html("");
+                $("#UpdateCNICBackCheck").removeClass('text-danger').html("");
+                $("#UpdateLicenceFrontCheck").removeClass('text-danger').html("");
+                $("#UpdateLicenceBackCheck").removeClass('text-danger').html("");
+
+            }
+
+
+            //Get Data From Firebase for Update
+            $(document).on('click', '.EditPassenger', function () {
+                // var keys = $(this).data('value');
+                // Get Data From Firebase for Update
+                var key = $(this).data('value');
+                // Create hidden element and store key in it
+                var hiddenElement = document.createElement("input");
+                hiddenElement.setAttribute("type", "hidden");
+                hiddenElement.setAttribute("id", "UpdateKey");
+                hiddenElement.setAttribute("value", key);
+                document.body.appendChild(hiddenElement);
+                $(".loader").addClass("d-none");
+                clearValidation();
+                resetBtn();
+                //enable addDriverbtn
+
+
+
+                database.ref('driver_details/' + key).once('value', function (snapshot) {
+                    var data = snapshot.val();
+                    $("#UpdateName").val(data.name);
+                    $("#Updateemail").val(data.email);
+                    $("#UpdatePhoneNo").val(data.phone_number);
+                    $("#UpdatePassword").val(data.password);
+                    $("#UpdateAddress").val(data.address);
+                    $("#UpdateCPassword").val(data.password);
+                    $("#UpdateCNIC").val(data.CNIC);
+                    $("#UpdateVehicalType").append('<option value=' + data.Vehicle_type + '>' + data.Vehicle_type + '</option>');
+                    $("#UpdateVehicalModel").append('<option value=' + data.Vehicle_model + '>' + data.Vehicle_model + '</option>')
+                    $("#UpdateVehicalColor").append('<option value=' + data.Vehicle_color + '>' + data.Vehicle_color + '</option>')
+                    $("#UpdateVehicalNumber").val(data.Vehicle_number);
+                    //Add image tags
+                    $("#CNIC_FrontPic").attr('src', data.CNIC_Front);
+                    $("#CNIC_BackPic").attr('src', data.CNIC_Back);
+                    $("#Licence_FrontPic").attr('src', data.Licence_Front);
+                    $("#Licence_BackPic").attr('src', data.Licence_Back);
+                    // Set key value to update button
+                    $("#UpdatetePassengerBtn").attr('data-value', key);
+                });
+            });
+
+
+
+
+
+            $('#CNICFrontImg').on('change', function (e) {
+                cnicFrontObj = e.target.files[0];
+            });
+
+            //generate on change for rest of input type file
+            $('#CNICBackImg').on('change', function (e) {
+                cnicBackObj = e.target.files[0];
+            });
+
+            $('#LicenceFrontImg').on('change', function (e) {
+                licenceFrontObj = e.target.files[0];
+            });
+
+            $('#LicenceBackImg').on('change', function (e) {
+                licenceBackObj = e.target.files[0];
+            });
+
+            $('#UpdateCNICFrontImg').on('change', function (e) {
+                UpdatecnicBackObj = e.target.files[0];
+            });
+
+            //generate on change for rest of input type file for Update
+            $('#UpdateCNICBackImg').on('change', function (e) {
+                UpdatecnicBackObj = e.target.files[0];
+            });
+
+            $('#UpdateLicenceFrontImg').on('change', function (e) {
+                UpdatecnicBackObj = e.target.files[0];
+            });
+
+            $('#UpdateLicenceBackImg').on('change', function (e) {
+                UpdatecnicBackObj = e.target.files[0];
+            });
+
+            // Funtion for reset Buttons and Hide Loader if not vaild
+            function resetBtn() {
+                $(".loader").addClass("d-none");
+                $(".loader").addClass("d-none");
+                $(".closebtn").attr('disabled', false);
+                $('#AddDriverBtn').attr('disabled', false);
+                $('#UpdateDriverBtn').attr('disabled', false);
+            }
+            // Insert  Driver
+            $("#AddDriverBtn").on('click', async function () {
+
+                $(".loader").removeClass("d-none");
+                //disble this button
+                $(this).attr('disabled', true);
+                // Retrieve form data
+                var name = $("#Name").val();
+                var email = $("#email").val();
+                var phone = $("#PhoneNo").val();
+                var password = $("#Password").val();
+                var cpassword = $("#CPassword").val();
+                var address = $("#Address").val();
+                var cnic = $("#CNIC").val();
+                var vehicalType = $("#VehicalType").val();
+                var vehicalModel = $("#VehicalModel").val();
+                var vehicalColor = $("#VehicalColor").val();
+                var VehicalNumber = $("#VehicalNumber").val();
+                var is_verified = 0;
+                let CnicFrontUrl = '';
+                var CnicBackUrl = '';
+                var LicenceFrontUrl = '';
+                var LicenceBackUrl = '';
+
+                //vaildation
+                if (name.trim() === "") {
+                    $("#NameCheck").addClass('text-danger').html("Name is required");
+                    resetBtn();
+                    return false;
+                }
+                if (email.trim() === "") {
+                    $("#EmailCheck").addClass('text-danger').html("Email is required");
+                    resetBtn();
+                    return false;
+                }
+                if (phone.trim() === "") {
+                    $("#PhoneCheck").addClass('text-danger').html("Phone is required");
+                    resetBtn();
+                    return false;
+                }
+                if (password.trim() === "") {
+                    $("#PasswordCheck").addClass('text-danger').html("Password is required");
+                    resetBtn();
+                    return false;
+                }
+                //password must have 6 digit
+                if (password.length < 6) {
+                    $("#PasswordCheck").addClass('text-danger').html("Password must have 6 digit");
+                    resetBtn();
+                    return false;
+                }
+                if (cpassword !== password) {
+                    $("#PasswordConfirmCheck").addClass('text-danger').html("Password and Confirm Password must be same");
+                    resetBtn();
+                    return false;
+                }
+                if (address === "") {
+                    $("#AddressCheck").addClass('text-danger').html("Address is required");
+                    resetBtn();
+                    return false;
+                }
+                if (cnic === "") {
+                    $("#CNICCheck").addClass('text-danger').html("CNIC is required");
+                    resetBtn()
+                    return false;
+                }
+                //vehicalType value includes() value-1
+                if (vehicalType.includes('value-1')) {
+                    $("#VehicalType").addClass('text-danger').html("Vehical Type is required");
+                    resetBtn()
+                    return false;
+                }
+                //vehicalModel value includes() value-1
+                if (vehicalModel.includes('value-1')) {
+                    $("#VehicalModel").addClass('text-danger').html("Vehical Model is required");
+                    resetBtn()
+                    return false;
+                }
+                //vehicalColor value includes() value-1
+                if (vehicalColor.includes('value-1')) {
+                    $("#VehicalColor").addClass('text-danger').html("Vehical Color is required");
+                    resetBtn()
+                    return false;
+                }
+                if (VehicalNumber === "") {
+                    $("#VehicalNumberCheck").addClass('text-danger').html("Vehical Number is required");
+                    resetBtn()
+                    return false;
+                }
+                // Check if image objects are defined seperately
+                if ($('#CNICFrontImg')[0].files.length === 0) {
+                    // Show error message
+                    $("#CNIFrontCCheck").addClass('text-danger').html("Please Select CNIC Front Image");
+                    resetBtn()
+                    return; // Exit function
+                }
+                if ($('#CNICBackImg')[0].files.length === 0) {
+                    // Show error message
+                    $("#CNICBackCheck").addClass('text-danger').html("Please Select CNIC Back Image");
+                    resetBtn()
+                    return; // Exit function
+                }
+                if ($('#LicenceFrontImg')[0].files.length === 0) {
+                    // Show error message
+                    $("#LicenceFrontCheck").addClass('text-danger').html("Please Select Licence Front Image");
+                    resetBtn()
+                    return; // Exit function
+                }
+                if ($('#LicenceBackImg')[0].files.length === 0) {
+                    // Show error message
+                    $("#LicenceBackCheck").addClass('text-danger').html("Please Select Licence Back Image");
+                    resetBtn()
+
+                    return; // Exit function
+                }
+                // Get current date
+                var currentDate = new Date();
+                var day = currentDate.getDate();
+                var month = currentDate.getMonth() + 1;
+                var year = currentDate.getFullYear();
+                var FullDate = day + "-" + month + "-" + year;
+
+                try {
+                    // Check if image objects are defined
+                    if (cnicFrontObj && cnicFrontObj.name && cnicBackObj && cnicBackObj.name &&
+                        licenceFrontObj && licenceFrontObj.name && licenceBackObj && licenceBackObj.name) {
+                        // Upload all images asynchronously
+                        const cnicFrontPromise = uploadImage(cnicFrontObj, cnic, "CNICFront");
+                        const cnicBackPromise = uploadImage(cnicBackObj, cnic, "CNICBack");
+                        const licenceFrontPromise = uploadImage(licenceFrontObj, cnic, "LicenceFront");
+                        const licenceBackPromise = uploadImage(licenceBackObj, cnic, "LicenceBack");
+                        // Wait for all promises to resolve
+                        const urls = await Promise.all([cnicFrontPromise, cnicBackPromise, licenceFrontPromise, licenceBackPromise]);
+
+                        // Assign URLs to variables
+                        CnicFrontUrl = urls[0];
+                        CnicBackUrl = urls[1];
+                        LicenceFrontUrl = urls[2];
+                        LicenceBackUrl = urls[3];
+
+
+                        // Construct data object
+                        var data = {
+                            name: name,
+                            email: email,
+                            phone_number: phone,
+                            password: password,
+                            address: address,
+                            CNIC: cnic,
+                            CNIC_Front: CnicFrontUrl,
+                            CNIC_Back: CnicBackUrl,
+                            Licence_Front: LicenceFrontUrl,
+                            Licence_Back: LicenceBackUrl,
+                            Vehicle_type: vehicalType,
+                            Vehicle_model: vehicalModel,
+                            Vehicle_color: vehicalColor,
+                            Vehicle_number: VehicalNumber,
+                            Is_verified: is_verified,
+                            Create_at: FullDate,
+                        };
+                        // disable closebtn 
+                        $(".closebtn").attr('disabled', true);
+                        // Push data to database
+                        await database.ref('driver_details/').push(data);
+                        $(".loader").removeClass("d-none")
+                        $("#AddDriverModel").modal('hide');
+                        // Display success message and hide modal
+                        $("#Msg").addClass('bg-success').toast('show');
+                        $("#Message").html("Driver Added Successfully");
+
+                    } else {
+                        //enable closebtn
+                        resetBtn();
+                        throw new Error("Please select all required images.");
+                    }
+                } catch (error) {
+                    // Display error message
+                    console.error("Error:", error);
+                    $(".loader").addClass("d-none");
+                    $("#AddDriverModel").modal('hide');
+                    $("#Msg").addClass('bg-danger').toast('show');
+                    $("#Message").html("Error: " + error.message);
+                    resetBtn();
+                    console.log("Error: " + error.message);
+                }
+            });
+
+            //Write update code here    
+            $("#UpdateDriverBtn").on('click', async function () {
+                $(".loader").removeClass("d-none");
+                //disble this button
+                $(this).attr('disabled', true);
+                var key = $("#UpdateKey").val();
+                // Retrieve form data
+                var name = $("#UpdateName").val();
+                var email = $("#Updateemail").val();
+                var phone = $("#UpdatePhoneNo").val();
+                var password = $("#UpdatePassword").val();
+                var cpassword = $("#UpdateCPassword").val();
+                var address = $("#UpdateAddress").val();
+                var cnic = $("#UpdateCNIC").val();
+                var vehicalType = $("#UpdateVehicalType").val();
+                var vehicalModel = $("#UpdateVehicalModel").val();
+                var vehicalColor = $("#UpdateVehicalColor").val();
+                var VehicalNumber = $("#UpdateVehicalNumber").val();
+                var is_verified = 0;
+                let CnicFrontUrl = '';
+                var CnicBackUrl = '';
+                var LicenceFrontUrl = '';
+                var LicenceBackUrl = '';
+
+                // Get current date
+                var currentDate = new Date();
+                var day = currentDate.getDate();
+                var month = currentDate.getMonth() + 1;
+                var year = currentDate.getFullYear();
+                var FullDate = day + "-" + month + "-" + year;
+
+                //vaildation
+                if (name.trim() === "") {
+                    $("#UpdateNameCheck").addClass('text-danger').html("Name is required");
+                    resetBtn();
+                    return false;
+                }
+                if (email.trim() === "") {
+                    $("#UpdateEmailCheck").addClass('text-danger').html("Email is required");
+                    resetBtn();
+                    return false;
+                }
+                if (phone.trim() === "") {
+                    $("#UpdatePhoneCheck").addClass('text-danger').html("Phone is required");
+                    resetBtn();
+                    return false;
+                }
+                if (password.trim() === "") {
+                    $("#UpdatePasswordCheck").addClass('text-danger').html("Password is required");
+                    resetBtn();
+                    return false;
+                }
+                //password must have 6 digit
+                if (password.length < 6) {
+                    $("#UpdatePasswordCheck").addClass('text-danger').html("Password must have 6 digit");
+                    resetBtn();
+                    return false;
+                }
+                if (cpassword !== password) {
+                    $("#UpdatePasswordConfirmCheck").addClass('text-danger').html("Password and Confirm Password must be same");
+                    resetBtn();
+                    return false;
+                }
+                if (address === "") {
+                    $("#UpdateAddressCheck").addClass('text-danger').html("Address is required");
+                    resetBtn();
+                    return false;
+                }
+                if (cnic === "") {
+                    $("#UpdateCNICCheck").addClass('text-danger').html("CNIC is required");
+                    resetBtn()
+                    return false;
+                }
+                //vehicalType value includes() value-1
+                if (vehicalType.includes('value-1')) {
+                    $("#UpdateVehicalType").addClass('text-danger').html("Vehical Type is required");
+                    resetBtn()
+                    return false;
+                }
+                //vehicalModel value includes() value-1
+                if (vehicalModel.includes('value-1')) {
+                    $("#UpdateVehicalModel").addClass('text-danger').html("Vehical Model is required");
+                    resetBtn()
+                    return false;
+                }
+                //vehicalColor value includes() value-1
+                if (vehicalColor.includes('value-1')) {
+                    $("#UpdateVehicalColor").addClass('text-danger').html("Vehical Color is required");
+                    resetBtn()
+                    return false;
+                }
+                if (VehicalNumber === "") {
+                    $("#UpdateVehicalNumberCheck").addClass('text-danger').html("Vehical Number is required");
+                    resetBtn()
+                    return false;
+                }
+                // Check if image objects are defined seperately
+                try {
+
+                    var data = {
+                        name: name,
+                        email: email,
+                        phone_number: phone,
+                        password: password,
+                        address: address,
+                        CNIC: cnic,
+                        Vehicle_type: vehicalType,
+                        Vehicle_model: vehicalModel,
+                        Vehicle_color: vehicalColor,
+                        Vehicle_number: VehicalNumber,
+                        Is_verified: is_verified,
+                        Create_at: FullDate,
+                    };
+                    // Check if CNIC Front image is set
+                    if (UpdatecnicFrontObj && UpdatecnicFrontObj.name) {
+                        const cnicFrontUrl = await uploadImage(UpdatecnicFrontObj, cnic, "CNICFront");
+                        if (cnicFrontUrl) {
+                            // CNIC Front image uploaded successfully
+                            data.CNIC_Front = cnicFrontUrl;
+                        } else {
+                            // CNIC Front image not uploaded
+                            throw new Error("Error uploading CNIC Front image.");
+                        }
+                    }
+
+                    // Check if CNIC Back image is set
+                    if (UpdatecnicBackObj && UpdatecnicBackObj.name) {
+                        const cnicBackUrl = await uploadImage(UpdatecnicBackObj, cnic, "CNICBack");
+                        if (cnicBackUrl) {
+                            // CNIC Back image uploaded successfully
+                            data.CNIC_Back = cnicBackUrl;
+                        } else {
+                            // CNIC Back image not uploaded
+                            throw new Error("Error uploading CNIC Back image.");
+                        }
+                    }
+
+                    // Check if Licence Front image is set
+                    if (UpdatelicenceFrontObj && UpdatelicenceFrontObj.name) {
+                        const licenceFrontUrl = await uploadImage(UpdatelicenceFrontObj, cnic, "LicenceFront");
+                        if (licenceFrontUrl) {
+                            // Licence Front image uploaded successfully
+                            data.Licence_Front = licenceFrontUrl;
+                        } else {
+                            // Licence Front image not uploaded
+                            throw new Error("Error uploading Licence Front image.");
+                        }
+                    }
+
+                    // Check if Licence Back image is set
+                    if (UpdatelicenceBackObj && UpdatelicenceBackObj.name) {
+                        const licenceBackUrl = await uploadImage(UpdatelicenceBackObj, cnic, "LicenceBack");
+                        if (licenceBackUrl) {
+                            // Licence Back image uploaded successfully
+                            data.Licence_Back = licenceBackUrl;
+                        } else {
+                            // Licence Back image not uploaded
+                            throw new Error("Error uploading Licence Back image.");
+                        }
+                    }
+                    // disable closebtn 
+                    $(".closebtn").attr('disabled', true);
+                    // update data to database
+                    await database.ref('driver_details/' + key).update(data);
+                    $(".loader").removeClass("d-none")
+                    $("#UpdateDriverModel").modal('hide');
+
+                    // Display success message and hide modal
+                    $("#Msg").addClass('bg-success').toast('show');
+                    $("#Message").html("Driver Added Successfully");
+
+                } catch (error) {
+                    // Display error message
+                    console.error("Error:", error);
+                    //enable Buttons and loaders
+                    resetBtn();
+                    //Display error message
+                    $("#AddDriverModel").modal('hide');
+                    $("#Msg").addClass('bg-danger').toast('show');
+                    $("#Message").html("Error: " + error.message);
+                    console.log("Error: " + error.message);
+                }
+            });
+            // Function to upload image to Firebase Storage
+            function uploadImage(imageObj, cnic, filename) {
+
+                return new Promise((resolve, reject) => {
+                    var storageRef = firebase.storage().ref('DriversDocImg/' + cnic + '/' + filename);
+                    var task = storageRef.put(imageObj);
+                    task.on("state_changed", snapshot => {
+                        // var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                        // console.log("Upload is " + progress + "% done");
+                    }, error => {
+                        console.log(error);
+                        reject(error);
+                    }, () => {
+                        task.snapshot.ref.getDownloadURL().then(downloadURL => {
+                            // console.log('File available at', downloadURL);
+                            resolve(downloadURL);
+                        }).catch(error => {
+                            console.log(error);
+                            reject(error);
+                        });
+                    });
+                });
+            }
+        </script>
+        <!--end body-->
+    </body>
+    <!--end body-->
+
+    </html>
